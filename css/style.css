@@ -60,7 +60,7 @@ body {
   body .input-wrapper {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 75%;
     height: 100px; }
 
 .text-input {
@@ -68,7 +68,7 @@ body {
   .text-input textarea {
     border-bottom: none;
     font-size: 16px;
-    width: 100%;
+    width: 1080px;
     position: fixed;
     line-height: 2em;
     bottom: 0px; }
