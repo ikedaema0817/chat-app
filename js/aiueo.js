@@ -14,22 +14,27 @@ const newPostRef = firebase.database().ref();
 
 // MSG送信
 $("#send").on("click", function(){
+  let room = $('input[name="room"]:checked').val();
+  
+//ラジオボタン の値によって格納場所を変更
     newPostRef.push({
         username: $("#username").val(),
-        text: $("#text").val()
+        text: $("#text").val(),
+        roomNumber: room
     });
     $("#text").val("");
 });
   
-$("#text").on("keydown", function(e){
-    console.log(e);
-    if(e.keyCode == 13 && e.shiftKey == false) {
-      newPostRef.push({
-        username: $("#username").val(),
-        text: $("#text").val()
-      });
-    }
-});
+// //space+ENTER送信についてはあとで
+// $("#text").on("keydown", function(e){
+//     console.log(e);
+//     if(e.keyCode == 13 && e.shiftKey == false) {
+//       newPostRef.push({
+//         username: $("#username").val(),
+//         text: $("#text").val()
+//       });
+//     }
+// });
 
 // MSG受信
 newPostRef.on("child_added", function(data){
@@ -37,9 +42,14 @@ newPostRef.on("child_added", function(data){
       // keyはデータを削除する時などに使用
       const k = data.key;
       // 記述方法は他にもある。
-    const str = '<ul class="m1"><li class="m2">'+ v.username +'</li><li class="m3"><p>' + v.text + '</p></li></ul>';
+    const str = 
+    '<div class="balloon"><figure class="balloon-image-right"><img src="）" alt="画像名"><figcaption class="balloon-image-description">' 
+    + v.username +'</figcaption></figure><div class="balloon-text-left"><p>'
+    + v.text +'</p></div></div>'
+    
     $("#output").append(str);
 });
+
 
 
 

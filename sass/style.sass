@@ -31,27 +31,30 @@ body
     overflow-y: auto
     width: 25%
     height: 100%
-
-  .item
-    padding: 15px 10px
-    
-
-  .item:hover
-    background-color: #9e9e9e61
-
-  .item p
+    border-right: 1px solid #00000026
+    box-sizing: border-box
+  
+  .roomText
     font-size: 20px
-    font-weight: bold
+
+  .left-colum
+    label
+      display: block
+      padding: 20px
+
+      input 
+        margin-right: 20px
+
+    form:hover
+      background-color: #9e9e9e61
 
   .right-colum
     display: inline-block
-    
     overflow-y: auto
     margin-left: 25%
     width: 75%
 
  
-    
 
   .username
     position: fixed
@@ -65,12 +68,11 @@ body
     padding-top: 100%
 
   .output-wrapper
-    margin: 10px 0 0 10px
+    margin: 10px 20px 20px 10px
     
   .output
     overflow-y: auto
     height: 570px
-    width: 450px
     
     ul 
       margin 10px 0
@@ -104,45 +106,104 @@ body
     bottom: 8px
     right: 10px
 
+//LINE風パクリ
 
-  .m1
-    margin: 20px 0
+.balloon 
+ margin: 40px 0
+ padding : 0 40px
+ position: relative
 
-  .m3
-    position: relative
-    display: inline-block
-    margin: 1.5em 0 1.5em 15px
-    padding: 7px 10px
-    min-width: 120px
-    max-width: 100%
-    color: #555
-    font-size: 16px
-    background: #e0edff
+.balloon:after,.balloon:before 
+ clear: both
+ content: ""
+ display: block
+
+.balloon-image-left 
+ position: absolute
+ left: 0
+ margin: 0
+ width: 60px
+ height: 60px
+
+.balloon-image-right 
+ position: absolute
+ right: 0
+ margin: 0
+ width: 60px
+ height: 60px
+
+.balloon figure img 
+ width: 100%
+ height: 100%
+ border: 1px solid #aaa
+ border-radius: 50%
+ margin: 0
+
+.balloon-image-description 
+ padding: 5px 0 0
+ font-size: 10px
+ text-align: center
+
+.balloon-text-right 
+ position: relative
+ margin-left: 40px
+ padding: 10px
+ border: 1px solid #aaa
+ border-radius: 10px
+ float: left
+ max-width: 100%
+
+.balloon-text-left 
+ position: relative
+ margin-right: 40px
+ padding: 10px
+ border: 1px solid #aaa
+ border-radius: 10px
+ float: right
+ max-width: 100%
+
+.balloon p 
+ margin: 0 0 20px
+
+.balloon p:last-child 
+ margin-bottom: 0
+
+/* 会話 */
+.balloon-text-right:before 
+ position: absolute
+ content: ''
+ border: 10px solid transparent
+ border-right: 10px solid #aaa
+ top: 15px
+ left: -20px
+
+.balloon-text-right:after 
+ position: absolute
+ content: ''
+ border: 10px solid transparet
+ border-right: 10px solid #fff
+ top: 15px
+ left: -19px
+
+.balloon-text-left:before 
+ position: absolute
+ content: ''
+ border: 10px solid transparent
+ border-left: 10px solid #aaa
+ top: 15px
+ right: -20px
+
+.balloon-text-left:after 
+ position: absolute
+ content: ''
+ border: 10px solid transparent
+ border-left: 10px solid #fff
+ top: 15px
+ right: -19px
 
 
-  .m3:before
-    content: ""
-    position: absolute
-    top: 50%
-    left: -30px
-    margin-top: -15px
-    border: 15px solid transparent
-    border-right: 15px solid #e0edff
 
 
-  .m3 p 
-    margin: 0
-    padding: 0
-
-
-
-
-//時間表示は保留
-// .m4
-//   display: inline-block
-
-
-//line風吹き出しパクリ
 
 
 

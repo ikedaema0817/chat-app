@@ -13,14 +13,20 @@ html(lang='ja')
 
         .contents-wrapper
           .left-colum
-            ul.channel-box
-              li.item: p myroom1
-              li.item: p myroom2
-              li.item: p myroom3
-              li.item: p myroom4
-            
-
-
+            form#radio-value
+              label
+                input#room1.roomRadio(type="radio" value="myroom1" name="room") 
+                a.roomText myroom1
+              label
+                input#room2.roomRadio(type="radio" value="myroom2" name="room") 
+                a.roomText myroom2
+              label
+                input#room3.roomRadio(type="radio" value="myroom3" name="room") 
+                a.roomText myroom3
+              label
+                input#room4.roomRadio(type="radio" value="myroom4" name="room") 
+                a.roomText myroom4
+              
           .right-colum
             .user-name.user-name2
               input.username(type="text" id="username")
