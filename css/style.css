@@ -77,6 +77,13 @@ body {
     position: fixed;
     bottom: 8px;
     right: 10px; }
+  .text-input img {
+    height: 30px;
+    width: 30px;
+    z-index: 1;
+    position: fixed;
+    bottom: 40px;
+    right: 10px; }
 
 .balloon {
   margin: 40px 0;
